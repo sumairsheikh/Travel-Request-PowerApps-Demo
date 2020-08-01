@@ -27,7 +27,7 @@ At start of this app you will find links of three screens
 Here I would also like to thanks Laura Rogers, Microsoft MVP for the inspiration of this app.
 
 Laura Rogers Website
-https://wonderlaura.com/
+[Link](https://wonderlaura.com/)
 
 Laura Rogers YouTube Channel
 https://www.youtube.com/channel/UCbTVoDCaPM6wE0xsDGGr9VA
