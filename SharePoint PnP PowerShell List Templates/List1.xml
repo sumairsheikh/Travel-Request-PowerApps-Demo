@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.23.2007.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-7559E05803784C578EA00FF2F8ACE19F">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-7559E05803784C578EA00FF2F8ACE19F" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Travel Request" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Travel Request" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Travel Request/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Travel Request/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Travel Request/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{6557DE19-23FB-4A00-8FFF-16BF326806E2}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Travel Request/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="ID" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Destination" />
+                <FieldRef Name="Trip_x0020_Start" />
+                <FieldRef Name="Trip_x0020_End" />
+                <FieldRef Name="Description" />
+                <FieldRef Name="Trip_x0020_Type" />
+                <FieldRef Name="Estimated_x0020_Cost" />
+                <FieldRef Name="Manager" />
+                <FieldRef Name="Status" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="Destination" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{01816c6d-cafa-4c9c-bc1c-9a4b5e0a2f28}" SourceID="{{listid:Travel Request}}" StaticName="Destination" Name="Destination" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="Trip Start" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{e5033a46-f73b-4b63-8e3d-264309b8a85e}" SourceID="{{listid:Travel Request}}" StaticName="Trip_x0020_Start" Name="Trip_x0020_Start" ColName="datetime1" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="Trip End" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{001b0bd4-6f29-4758-aa32-ea6c01d1fddb}" SourceID="{{listid:Travel Request}}" StaticName="Trip_x0020_End" Name="Trip_x0020_End" ColName="datetime2" RowOrdinal="0" />
+            <Field Type="Note" DisplayName="Description" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" Sortable="FALSE" ID="{c6c1b808-42b6-4a13-9c5f-1e334009fd94}" SourceID="{{listid:Travel Request}}" StaticName="Description" Name="Description" ColName="ntext2" RowOrdinal="0" />
+            <Field Type="Choice" DisplayName="Trip Type" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" ID="{acd7bc8b-cb20-475b-bccf-4703dc25567e}" SourceID="{{listid:Travel Request}}" StaticName="Trip_x0020_Type" Name="Trip_x0020_Type" ColName="nvarchar5" RowOrdinal="0">
+              <Default>Conference</Default>
+              <CHOICES>
+                <CHOICE>Conference</CHOICE>
+                <CHOICE>Event</CHOICE>
+                <CHOICE>Training</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Currency" DisplayName="Estimated Cost" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" LCID="1056" ID="{d9e76a53-56f2-4b01-a50c-dfc65b40e559}" SourceID="{{listid:Travel Request}}" StaticName="Estimated_x0020_Cost" Name="Estimated_x0020_Cost" ColName="float1" RowOrdinal="0" />
+            <Field Type="User" DisplayName="Manager" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{0ff59873-4503-4937-babd-ed19b9276501}" SourceID="{{listid:Travel Request}}" StaticName="Manager" Name="Manager" ColName="int1" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Status" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{dc592246-8cd7-4955-b13e-020bef8a5916}" SourceID="{{listid:Travel Request}}" StaticName="Status" Name="Status" ColName="nvarchar6" RowOrdinal="0">
+              <Default>Pending For Approval</Default>
+            </Field>
+          </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://4-northeurope1.pushp.svc.ms/notifications?token=w0-c78554f6-4992-4f41-bd4e-5d52b4f8ea6d" ExpiresInDays="1" />
+            <pnp:Webhook ServerNotificationUrl="https://12-northeurope1.pushp.svc.ms/notifications?token=w0-e1363ded-a5d0-454f-abbf-8ae0092c49e8" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

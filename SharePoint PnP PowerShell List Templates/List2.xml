@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.23.2007.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-BD452E6D7F56485CB4A649DDB2AA73AE">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-BD452E6D7F56485CB4A649DDB2AA73AE" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Travel Request Approver Details" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Travel Request Approver Details" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Travel Request Approver Details/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Travel Request Approver Details/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Travel Request Approver Details/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{0505B1D2-6486-4E24-B22F-304D1BC1763A}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Travel Request Approver Details/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Approver" />
+                <FieldRef Name="Approver_x0020_Action" />
+                <FieldRef Name="Approver_x0020_Action_x0020_On" />
+                <FieldRef Name="Master_x0020_Form_x0020_ID_x0020" />
+                <FieldRef Name="Master_x0020_Form_x0020_ID" />
+                <FieldRef Name="Approver_x0020_Order" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="User" DisplayName="Approver" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{c7125b9e-8221-43ce-8bd5-0f5ffb2eebdc}" SourceID="{{listid:Travel Request Approver Details}}" StaticName="Approver" Name="Approver" ColName="int1" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Approver Action" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{1b3005f3-217f-4126-883b-30e20b826138}" SourceID="{{listid:Travel Request Approver Details}}" StaticName="Approver_x0020_Action" Name="Approver_x0020_Action" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="Approver Action On" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{1582a5b2-8dfb-4c3d-99f8-9135ef4b5527}" SourceID="{{listid:Travel Request Approver Details}}" StaticName="Approver_x0020_Action_x0020_On" Name="Approver_x0020_Action_x0020_On" ColName="datetime1" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Master Form ID" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{dbda3a60-bd2c-478e-b015-1542ded09617}" SourceID="{{listid:Travel Request Approver Details}}" StaticName="Master_x0020_Form_x0020_ID" Name="Master_x0020_Form_x0020_ID" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="Approver Order" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{71f40326-9dcf-4be1-b1f4-de05c9f5e943}" SourceID="{{listid:Travel Request Approver Details}}" StaticName="Approver_x0020_Order" Name="Approver_x0020_Order" ColName="float1" RowOrdinal="0" />
+            <Field Type="Lookup" DisplayName="Master Form ID Lookup" Required="FALSE" EnforceUniqueValues="FALSE" List="{listid:Travel Request}" ShowField="ID" UnlimitedLengthInDocumentLibrary="FALSE" ID="{d0274eac-1dfc-40ab-9cc8-f3fade2b759b}" SourceID="{{listid:Travel Request Approver Details}}" StaticName="Master_x0020_Form_x0020_ID_x0020" Name="Master_x0020_Form_x0020_ID_x0020" ColName="int2" RowOrdinal="0" Version="2" Group="" Indexed="TRUE" />
+          </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://13-northeurope1.pushp.svc.ms/notifications?token=w1-31fd1fb1-bbb0-4aa0-a352-a3967a5be131" ExpiresInDays="1" />
+            <pnp:Webhook ServerNotificationUrl="https://12-northeurope1.pushp.svc.ms/notifications?token=w0-717116bb-d45e-4dc1-854e-a0942ab41da4" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

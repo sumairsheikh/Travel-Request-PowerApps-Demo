@@ -1,0 +1,11 @@
+Import List Template
+
+#Config Variables
+$SiteURL = "Your SharePoint Online Site URL"
+$TemplateFile = "C:\ListBackup\List1.xml"
+ 
+#Connect to PNP Online
+Connect-PnPOnline -Url $SiteURL -UseWebLogin
+ 
+Write-Host "Creating List from Template..."
+Apply-PnPProvisioningTemplate -Path $TemplateFile
