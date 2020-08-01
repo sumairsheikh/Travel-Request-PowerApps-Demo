@@ -1,8 +1,10 @@
-## Welcome to GitHub Pages
+# Travel Request Demo PowerApps
 
-You can use the [editor on GitHub](https://github.com/sumairsheikh/Travel-Request-PowerApps-Demo/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+- Platform: PowerApps
+- Created By: Muhammad Sumair Sheikh
+- Email: sumairsheikh89@gmail.com
+- Location: Karachi, Pakistan
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
