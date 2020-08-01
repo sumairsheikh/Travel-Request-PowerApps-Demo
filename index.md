@@ -5,35 +5,33 @@
 - Email: sumairsheikh89@gmail.com
 - Location: Karachi, Pakistan
 
+## Features
+- I have created a simple travel request app using PowerApp and SharePoint as a datasource. 
+- This app will also take one level of approval i.e. requestor's manager approval on the request. 
+- I am not using Microsoft Flow for taking approval in this app instead I am using PowerApp deep linking approach to send direct link of submitted request in PowerApp to approver.
 
-### Markdown
+## Screens
+At start of this app you will find links of three screens
+ - New Request
+    - From this screen, user can submit new travel request
+ - Submitted Request
+    - From this screen, user can view all his submitted requests
+ - Pending Approval
+    - From this screen, user can view requests where his approval is required
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Download
+- App files and SharePoint lists template files available on GitHub
+- You can use PowerShell SharePoint PnP import template script to create lists in your environment
 
-```markdown
-Syntax highlighted code block
+## Credits
+Here I would also like to thanks Laura Rogers, Microsoft MVP for the inspiration of this app.
 
-# Header 1
-## Header 2
-### Header 3
+Laura Rogers Website
+https://wonderlaura.com/
 
-- Bulleted
-- List
+Laura Rogers YouTube Channel
+https://www.youtube.com/channel/UCbTVoDCaPM6wE0xsDGGr9VA
 
-1. Numbered
-2. List
+SharePoint Power Hour: Power Apps Dynamic Approvals Panel
+https://www.youtube.com/watch?v=uR46EYGQ0hA
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sumairsheikh/Travel-Request-PowerApps-Demo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
